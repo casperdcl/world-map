@@ -90,25 +90,6 @@ olympic_colors = {
 
 # %% Create SVG, inspired by http://kuanbutts.com/2018/09/06/geodataframe-to-svg-2
 
-'''
-# matplotlib version
-import matplotlib.pyplot as plt
-ax = gdf.plot(
-    color=gdf.index.map(lambda x: color_map[colors[x]]),
-    edgecolor="black", linewidth=0.5,
-    figsize=(aspect * (size := 3 * 12), size), zorder=1)
-ax.set_axis_off()
-ax.set_xlim(-(x:=18.5e6), x)
-ax.set_ylim(-(y:=9.3e6), y)
-ax.set_facecolor(water)
-
-# add graticules & water
-grid.plot(ax=ax, color=water, zorder=0)
-grid.plot(ax=ax, edgecolor='black', alpha=0.1, linewidth=0.5, zorder=2)
-
-plt.savefig("world-map.jpg", dpi=90, bbox_inches='tight', pad_inches=0, facecolor=water)
-'''
-
 scale = 0.1 if to_crs == "WGS84" else 1e-6
 viewbox = grid.total_bounds * scale
 viewbox[2:] -= viewbox[:2]
@@ -120,14 +101,6 @@ dwg.stroke(color=water, width=0.01)
 g = svgwrite.container.Group(id='relief')
 dwg.add(dwg.image(href=f"data:image/jpeg;base64,{b64encode(Path(fname).read_bytes()).decode()}",
                   height='100%', width='100%', x=viewbox[0], y=viewbox[1]))
-
-'''
-# solid sea version
-g = svgwrite.container.Group(id='sea')
-for row in grid:
-    g.add(dwg.polygon(points=np.asanyarray(row.exterior.coords.xy).T[:-1] * [scale, -scale]))
-dwg.add(g)
-'''
 
 g = svgwrite.container.Group(id='countries', opacity=0.15)
 for continent, fill in olympic_colors.items():
