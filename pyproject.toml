@@ -1,3 +1,23 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+[tool.setuptools.package-dir]
+world_map = ""
+[tool.setuptools]
+packages = ["world_map"]
+[project.urls]
+repository = "https://github.com/casperdcl/world-map"
+[project]
+name = "world_map"
+version = "0.0.0"
+authors = [{name = "Casper da Costa-Luis", email = "casper.dcl@physics.org"}]
+description = "Poster-quality Eckert II projection of Earth"
+readme = "README.md"
+requires-python = ">=3.7"
+keywords = ["svg", "map", "world", "poster", "cartography", "vector", "geospatial", "earth", "raster", "projection"]
+license = {text = "MPL-2.0"}
+dependencies = ["geopandas", "matplotlib", "networkx", "numpy", "pillow", "rasterio", "shapely", "svgwrite"]
+
 [tool.flake8]
 max_line_length = 120
 exclude = [".git", "__pycache__", ".ipynb_checkpoints"]

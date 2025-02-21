@@ -1,3 +1,7 @@
 /ne_*
 /NE*
 /world-map.svg
+__pycache__/
+.ipynb_checkpoints/
+/*.egg*/
+/build/

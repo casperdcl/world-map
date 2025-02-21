@@ -20,24 +20,12 @@ Poster-quality [Eckert II](https://en.wikipedia.org/wiki/Eckert_II_projection) p
 
 as well as subtle shading of continents & countries.
 
-## Requirements
-
-### Data
-
-- `NE2_50M_SR_W/NE2_50M_SR_W.tif`
-- `ne_50m_rivers_lake_centerlines_scale_rank.shp`
-- `ne_50m_lakes.shp`
-- `ne_50m_glaciated_areas.shp`
-- `ne_50m_geographic_lines.shp`
-- `ne_50m_admin_0_countries.shp`
-
-### Python packages
-
-- `geopandas`
-- `matplotlib`
-- `networkx`
-- `numpy`
-- `PIL`
-- `rasterio`
-- `shapely`
-- `svgwrite`
+> [!TIP]
+> **Data Requirements**
+>
+> - `NE2_50M_SR_W/NE2_50M_SR_W.tif`
+> - `ne_50m_rivers_lake_centerlines_scale_rank.shp`
+> - `ne_50m_lakes.shp`
+> - `ne_50m_glaciated_areas.shp`
+> - `ne_50m_geographic_lines.shp`
+> - `ne_50m_admin_0_countries.shp`

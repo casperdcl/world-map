@@ -1,3 +1,4 @@
+"""See https://github.com/casperdcl/world-map for details"""
 # %% Load data
 from base64 import b64encode
 from math import pi
@@ -14,6 +15,7 @@ from shapely import box
 
 __author__ = "Casper da Costa-Luis (https://github.com/casperdcl)"
 __license__ = "MPL-2.0"
+__version__ = "0.0.0"
 
 # Eckert II, ESRI:53014, https://epsg.io/53014
 to_crs = "+proj=eck2 +lon_0=0 +x_0=0 +y_0=0 +R=6371000 +units=m +no_defs +type=crs"
